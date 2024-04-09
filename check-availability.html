@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Diagnosers - Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            /* Underline heading */
+            font-size: 28px;
+            /* Increase font size */
+        }
+
+        .diagnoser {
+            background-color: #f7e4d9;
+            /* Light pink box color */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .diagnoser h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .diagnoser p {
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .button-section {
+            text-align: right;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            /* Green button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #218838;
+            /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Available Diagnosers</h1>
+        <div class="diagnoser">
+            <h2>Diagnoser Name: Dr. Rahul</h2>
+            <p>Specialization: Autism Spectrum Disorders</p>
+            <p>Availability: Monday to Friday, 9:00 AM - 5:00 PM</p>
+            <div class="button-section">
+                <button class="button" onclick="scheduleAppointment('john-smith')">Schedule Appointment</button>
+            </div>
+        </div>
+        <div class="diagnoser">
+            <h2>Diagnoser Name: Dr. Revathi</h2>
+            <p>Specialization: Attention Deficit Disorders</p>
+            <p>Availability: Tuesday and Thursday, 10:00 AM - 3:00 PM</p>
+            <div class="button-section">
+                <button class="button" onclick="scheduleAppointment('emily-brown')">Schedule Appointment</button>
+            </div>
+        </div>
+        <!-- More diagnoser entries here -->
+    </div>
+
+    <script>
+        function scheduleAppointment(diagnoserName) {
+            // Assuming AJAX request or backend processing for appointment scheduling
+            alert(Appointment with ${ diagnoserName } scheduled successfully.);
+        }
+    </script>
+</body>
+
+</html>

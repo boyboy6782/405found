@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .user-card {
+            background-color: #e0f7fa;
+            /* Light blue background color */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-card h3 {
+            color: #007bff;
+            /* Blue color for user name */
+            margin-bottom: 10px;
+        }
+
+        .user-card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+            /* Red color for delete button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+            /* Darker red on hover */
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Management - Admin Panel</h1>
+        <div class="user-card" id="user1">
+            <h3>User: Rishabh</h3>
+            <p>Email: Rishabh@example.com</p>
+            <p>Role: Admin</p>
+            <button class="delete-btn" onclick="deleteUser('user1')">Delete User</button>
+        </div>
+        <div class="user-card" id="user2">
+            <h3>User: iya</h3>
+            <p>Email: iya@example.com</p>
+            <p>Role: User</p>
+            <button class="delete-btn" onclick="deleteUser('user2')">Delete User</button>
+        </div>
+        <div id="successMessage" class="success-message" style="display: none;">User successfully deleted!</div>
+    </div>
+
+    <script>
+        function deleteUser(userId) {
+            // Code to delete the user from the database or backend
+            document.getElementById(userId).remove();
+            document.getElementById('successMessage').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

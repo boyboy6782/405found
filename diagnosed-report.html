@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosed Report - Patient Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7fafc;
+            /* Light blue background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            /* White box background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            color: #007bff;
+            /* Blue header color */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .report {
+            background-color: #e9f7fd;
+            /* Light blue box background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .report p {
+            margin-bottom: 10px;
+        }
+
+        .download-btn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            /* Green color for download button */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
+            /* Darker green color on hover */
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            color: #007bff;
+            /* Blue color for message */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Diagnosed Report - Deepthi</h1>
+        <div class="report">
+            <p><strong>Date of Diagnosis:</strong> April 9, 2024</p>
+            <p><strong>Doctor:</strong> Dr. Ramesh</p>
+            <p><strong>Diagnosis:</strong> Autism Spectrum Disorder</p>
+            <p><strong>Findings:</strong> Interested in Art</p>
+            <p><strong>Notes:</strong> Recommends art field.</p>
+        </div>
+        <button class="download-btn" onclick="downloadReport()">Download Report</button>
+        <p class="message" id="download-message">Report downloaded</p>
+    </div>
+
+    <script>
+        function downloadReport() {
+            // Simulate download process
+            setTimeout(() => {
+                document.getElementById('download-message').style.display = 'block';
+            }, 1000); // Display message after 1 second (simulating download)
+        }
+    </script>
+</body>
+
+</html>

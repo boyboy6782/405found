@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - AUTIsolve</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            background-image: url('dashu.jpg');
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        .section h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* New styles for a more colorful and attractive design */
+        .button-primary {
+            background-color: #007bff;
+            /* Blue color for primary button */
+        }
+
+        .button-primary:hover {
+            background-color: #0056b3;
+            /* Darker color on hover */
+        }
+
+        .button-secondary {
+            background-color: #007bff;
+            /* Blue color for secondary button */
+            color: white;
+        }
+
+        .button-secondary:hover {
+            background-color: #0056b3;
+            /* Darker color on hover */
+        }
+
+        .button-tertiary {
+            background-color: #007bff;
+            /* Blue color for tertiary button */
+            color: white;
+        }
+
+        .button-tertiary:hover {
+            background-color: #0056b3;
+            /* Darker color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Dashboard - AUTIsolve</h1>
+        <div id="start-analysis" class="section">
+            <h2>Start Analysis</h2>
+            <p>Get your analysis done here.</p>
+            <button class="button button-primary" onclick="navigateTo('start-analysis.html')">Go to Analysis</button>
+        </div>
+
+        <div id="diagnosed-report" class="section active">
+            <h2>Diagnosed Report</h2>
+            <p>View your diagnosed report here.</p>
+            <button class="button button-primary" onclick="navigateTo('diagnosed-report.html')">Go to Diagnosed
+                Report</button>
+        </div>
+
+        <div id="appointments" class="section">
+            <h2>View Appointments</h2>
+            <p>View your upcoming appointments.</p>
+            <button class="button button-primary" onclick="navigateTo('view-appointments.html')">View
+                Appointments</button>
+        </div>
+
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            hideAllSections();
+            document.getElementById(sectionId).classList.add("active");
+        }
+
+        function hideAllSections() {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+        }
+
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+
+</html>
